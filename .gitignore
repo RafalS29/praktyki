@@ -1,0 +1,40 @@
+# Secrets: leave example templates committed
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*credentials*.json
+
+# Databases and mutable runtime data
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+**/data/
+**/private_uploads/
+**/uploads_private/
+
+# Python/development caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Local editors, logs and temporary files
+.vscode/
+.idea/
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+pytest_wynik_*.png

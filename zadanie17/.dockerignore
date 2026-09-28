@@ -1,0 +1,27 @@
+# Only the explicitly-listed COPY targets in Dockerfile are included.
+.git/
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+private_uploads/
+data/
+*.log
+*.tmp
+.gitignore
+README.md
+README.txt
+tests/
+run.ps1
+inspect.ps1
+run_tests.py
+requirements-tests.txt
+pytest_wynik_*.png

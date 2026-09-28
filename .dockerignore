@@ -1,0 +1,24 @@
+# Protection when building with the repository root as Docker context.
+.git/
+.github/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.db
+**/*.db-*
+**/*.sqlite
+**/*.sqlite3
+**/data/
+**/private_uploads/
+**/uploads_private/
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/venv/
+**/.pytest_cache/
+**/.vscode/
+**/.idea/
+**/tests/
+**/*.log
+**/*.tmp
+**/pytest_wynik_*.png

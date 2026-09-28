@@ -1,0 +1,4 @@
+let token="",fid="";
+l.onclick=async()=>{let r=await fetch("/api/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:u.value,password:p.value})});let d=await r.json();token=d.token||"";s.textContent=r.ok?"Zalogowano":"Błąd logowania";up.disabled=!token};
+up.onclick=async()=>{if(!f.files[0]){out.textContent="Wybierz plik";return}let x=new FormData();x.append("file",f.files[0]);let r=await fetch("/api/upload",{method:"POST",headers:{Authorization:"Bearer "+token},body:x});let d=await r.json();fid=d.file_id||"";out.textContent=r.ok?"Zapisano":"Błąd: "+d.error;get.disabled=!fid};
+get.onclick=async()=>{let r=await fetch("/api/files/"+encodeURIComponent(fid),{headers:{Authorization:"Bearer "+token}});if(!r.ok){out.textContent="Brak dostępu";return}let a=document.createElement("a");a.href=URL.createObjectURL(await r.blob());a.download="obraz";a.click()};
